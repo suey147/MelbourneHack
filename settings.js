@@ -16,6 +16,18 @@ var select = document.querySelector(".timetable").addEventListener('click',funct
     console.log(chosesTime);
 })
 
+
+const blocking_site = document.getElementById("siteArray").value;
+const save = document.getElementById("enter");
+site=[];;
+save.addEventListener("click", () => {
+    site.push(blocking_site);
+    site.join("\n")
+    const blocked = blocking_site.split("\n").map(s => s.trim()).filter(Boolean);
+    chrome.storage.local.set({blocked});
+});
+
+
 let projectNameRef;
 let startTimeRef;
 let endTimeRef;

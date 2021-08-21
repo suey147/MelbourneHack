@@ -3,6 +3,6 @@
       "id": 1,
       "priority": 1,
       "action": { "type": "block" },
-      "condition": {"urlFilter": "monash", "resourceTypes": ["main_frame"] }
+      "condition": {"urlFilter": "wikipedia", "resourceTypes": ["main_frame"] }
     }
 ]
