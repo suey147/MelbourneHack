@@ -1,0 +1,13 @@
+body {
+    margin: 10%;
+}
+
+html {
+    height: 200px;
+}
+
+.mdl-textfield {
+    width: 200px;
+    max-width: 75%;
+    padding: 10px;
+}

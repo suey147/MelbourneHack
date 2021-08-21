@@ -3,7 +3,7 @@
     "description": "A Chrome Extension for Time and Study Management",
     "version": "1.0",
     "manifest_version": 3 ,
-    "permissions": ["storage","webRequest","webRequestBlocking","<all_urls>"],
+    "permissions": ["storage","webRequest","alarms","webRequestBlocking","<all_urls>"],
     "options_page": "main.html",
     "background": {
         "service_worker": "background.js"
