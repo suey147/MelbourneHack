@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <h3 id="timer"><span id="hoursSpan">00</span>:<span id="minutesSpan">00</span></h3>
+    <h3 id="timer"><span id="hoursSpan">00</span>:<span id="minutesSpan">00</span>:<span id="secondsSpan">00</span></h3>
     <div class="mdl-textfield mdl-js-textfield--floating-label">
       <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hoursInput" placeholder="Hours">
       <span class="mdl-textfield__error">Input is not a number!</span>
     </div>
     <div class="mdl-textfield mdl-js-textfield">
       <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="minutesInput" placeholder="Minutes">
+      <span class="mdl-textfield__error">NaN</span>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="secondsInput" placeholder="Seconds">
       <span class="mdl-textfield__error">NaN</span>
     </div>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="startTimer">
