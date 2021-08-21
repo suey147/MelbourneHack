@@ -1,0 +1,25 @@
+
+.table_upper
+{
+    vertical-align: top; 
+    display: inline-block; 
+    zoom: 1; width: 100px; 
+    height: 20px; 
+    font-size: 0px; 
+    border-left: 1px solid black; 
+    background: rgb(255, 193, 252); 
+    border-top: 1px solid black; 
+    border-right-color: black; 
+}
+
+.lower
+{
+    vertical-align: top; 
+    display: inline-block; 
+    zoom: 1; width: 100px; 
+    height: 20px; 
+    font-size: 0px; 
+    border-left: 1px solid black; 
+    background: rgb(255, 193, 252); 
+    border-bottom-color: black;
+}
