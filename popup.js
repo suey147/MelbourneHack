@@ -31,7 +31,7 @@ function getTime() {
             timeUntil = timeUntil - h*3600000;
             m = Math.floor(timeUntil/60000);
             timeUntil = timeUntil - m*60000
-            s = Math.ceil(timeUntil/1000)
+            s = Math.floor(timeUntil/1000)
             hours.innerText = String(h);
             if (m < 10) {
                 minutes.innerText = `0${m}`
