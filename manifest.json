@@ -3,7 +3,7 @@
     "description": "A Chrome Extension for Time and Study Management",
     "version": "1.0",
     "manifest_version": 3 ,
-    "permissions": ["storage","alarms","declarativeNetRequest"],
+    "permissions": ["storage","activeTab","scripting","alarms","declarativeNetRequest"],
     "host_permissions": ["*://*/*"],
     "declarative_net_request":{    
         "rule_resources": [{
