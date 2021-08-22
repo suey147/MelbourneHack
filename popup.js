@@ -15,35 +15,37 @@ function startTimer() {
 
 function getTime() {
     chrome.storage.sync.get(['time'], function(result) {
-        const now = new Date().valueOf();
-        let hours = document.getElementById("hoursSpan");
-        let minutes = document.getElementById("minutesSpan");
-        let seconds = document.getElementById("secondsSpan")
-        let timeUntil = result.time - now;
-        if (timeUntil <= 0) {
-            hours.innerText = '00';
-            minutes.innerText = '00';
-            seconds.innerText = '00'
-        }
-        else {
+        if (typeof result.time != "undefined") {
+            const now = new Date().valueOf();
+            let hours = document.getElementById("hoursSpan");
+            let minutes = document.getElementById("minutesSpan");
+            let seconds = document.getElementById("secondsSpan")
+            let timeUntil = result.time - now;
+            if (timeUntil <= 0) {
+                hours.innerText = '00';
+                minutes.innerText = '00';
+                seconds.innerText = '00'
+            }
+            else {
 
-            h = (Math.floor(timeUntil/3600000));
-            timeUntil = timeUntil - h*3600000;
-            m = Math.floor(timeUntil/60000);
-            timeUntil = timeUntil - m*60000
-            s = Math.floor(timeUntil/1000)
-            hours.innerText = String(h);
-            if (m < 10) {
-                minutes.innerText = `0${m}`
-            }
-            else {
-                minutes.innerText = String(m)
-            }
-            if (s < 10) {
-                seconds.innerText = `0${s}`
-            }
-            else {
-                seconds.innerText = String(s)
+                h = (Math.floor(timeUntil/3600000));
+                timeUntil = timeUntil - h*3600000;
+                m = Math.floor(timeUntil/60000);
+                timeUntil = timeUntil - m*60000
+                s = Math.floor(timeUntil/1000)
+                hours.innerText = String(h);
+                if (m < 10) {
+                    minutes.innerText = `0${m}`
+                }
+                else {
+                    minutes.innerText = String(m)
+                }
+                if (s < 10) {
+                    seconds.innerText = `0${s}`
+                }
+                else {
+                    seconds.innerText = String(s)
+                }
             }
         }
     })
